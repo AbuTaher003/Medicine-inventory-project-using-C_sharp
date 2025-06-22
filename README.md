@@ -101,6 +101,7 @@ CREATE TABLE IF NOT EXISTS contact_messages (
   "DefaultConnection": "Server=localhost;Database=medicine_inventory;Uid=root;Pwd=your_password;"
 }
 ```
+---
 📂 Folder Structure
 ```pgsql
 /Pages
