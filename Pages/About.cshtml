@@ -1,0 +1,70 @@
+@page
+@model MedicineInventory.Pages.AboutModel
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="about-container">
+    <div class="slider">
+        <img id="sliderImage" src="~/images/about_1.jpg" alt="About Image" />
+    </div>
+
+    <div class="about-text">
+        <h2>About Our Medicine Inventory System</h2>
+        <p>
+            Welcome to our <strong>Medicine Inventory Management System</strong> — a comprehensive digital platform
+            designed to efficiently manage and monitor medicines across medical facilities.
+        </p>
+        <p>
+            Our primary goal is to <strong>streamline medicine tracking</strong>, ensure <strong>stock level
+                accuracy</strong>, and <strong>minimize wastage</strong> by enabling real-time inventory updates and
+            intelligent reporting features. The system is built with simplicity, flexibility, and precision in mind.
+        </p>
+        <p>
+            Administrators can add, update, and monitor stock levels effortlessly, while users can keep track of daily
+            medicine consumption and low-stock warnings. Auditors have access to detailed logs and historical data to
+            ensure full transparency and accountability across all operations.
+        </p>
+        <p>
+            Key features include:
+        <ul style="text-align: left; max-width: 800px; margin: 10px auto;">
+            <li>✔️ Real-time medicine stock tracking</li>
+            <li>✔️ Low stock and expiry alerts</li>
+            <li>✔️ Role-based access for Admins, Users, and Auditors</li>
+            <li>✔️ Auto-generated reports and CSV exports</li>
+            <li>✔️ Secure login with session management</li>
+            <li>✔️ Clean, responsive, and user-friendly interface</li>
+        </ul>
+        </p>
+        <p>
+            Our platform ensures <strong>transparency</strong>, <strong>efficiency</strong>, and <strong>data
+                integrity</strong> across the entire medicine management process. Whether you are running a hospital,
+            pharmacy, or medical warehouse, this system helps you stay organized, informed, and proactive.
+        </p>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script>
+        const imagePaths = [
+            '/images/about_1.jpg',
+            '/images/about_2.jpg',
+            '/images/about_4.jpg',
+            '/images/about_5.jpg',
+            '/images/about_6.jpg',
+            '/images/about_7.jpg',
+            '/images/about_3.jpeg'
+        ];
+        let index = 0;
+        const slider = document.getElementById("sliderImage");
+
+        setInterval(() => {
+            index = (index + 1) % imagePaths.length;
+            slider.classList.remove("fade-in");
+            void slider.offsetWidth; // trigger reflow for animation
+            slider.src = imagePaths[index];
+            slider.classList.add("fade-in");
+        }, 3000);
+    </script>
+}

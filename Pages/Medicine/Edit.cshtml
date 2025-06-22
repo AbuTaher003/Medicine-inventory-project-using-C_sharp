@@ -1,0 +1,115 @@
+@page
+@model MedicineInventory.Pages.Medicine.EditModel
+@{
+    ViewData["Title"] = "Edit Medicine";
+}
+
+<style>
+    .edit-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: #fff;
+        padding: 2rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .edit-container h2 {
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 1.8rem;
+        color: #2c3e50;
+        letter-spacing: 1px;
+    }
+
+    label {
+        font-weight: 600;
+        color: #34495e;
+    }
+
+    input.form-control {
+        border-radius: 8px;
+        box-shadow: inset 0 2px 6px rgb(0 0 0 / 0.1);
+        transition: all 0.3s ease;
+    }
+
+    input.form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 6px #0d6efd;
+        outline: none;
+    }
+
+    .btn-primary {
+        background: linear-gradient(45deg, #0d6efd, #3a8dff);
+        border: none;
+        border-radius: 10px;
+        padding: 0.6rem 1.8rem;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: background 0.3s ease;
+        box-shadow: 0 4px 12px rgb(13 110 253 / 0.4);
+    }
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #3a8dff);
+        box-shadow: 0 6px 18px rgb(3 43 115 / 0.6);
+    }
+
+    .btn-secondary {
+        border-radius: 10px;
+        padding: 0.6rem 1.8rem;
+        font-weight: 600;
+        font-size: 1.05rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #6c757d;
+        color: #fff;
+    }
+
+    .text-danger {
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
+    }
+</style>
+
+<div class="edit-container shadow-sm">
+    <h2>Edit Medicine</h2>
+
+    <form method="post" novalidate>
+        <input type="hidden" asp-for="Medicine.Id" />
+        
+        <div class="mb-3">
+            <label asp-for="Medicine.Name" class="form-label"></label>
+            <input asp-for="Medicine.Name" class="form-control" required />
+            <span asp-validation-for="Medicine.Name" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Medicine.Manufacturer" class="form-label"></label>
+            <input asp-for="Medicine.Manufacturer" class="form-control" />
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Medicine.Quantity" class="form-label"></label>
+            <input asp-for="Medicine.Quantity" class="form-control" type="number" min="0" required />
+            <span asp-validation-for="Medicine.Quantity" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-4">
+            <label asp-for="Medicine.ExpiryDate" class="form-label"></label>
+            <input asp-for="Medicine.ExpiryDate" class="form-control" type="date" />
+            <span asp-validation-for="Medicine.ExpiryDate" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="/Medicine/Index" class="btn btn-secondary">Back</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

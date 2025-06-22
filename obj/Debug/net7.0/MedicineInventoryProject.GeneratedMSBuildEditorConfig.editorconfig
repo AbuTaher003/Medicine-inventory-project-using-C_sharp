@@ -1,0 +1,101 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MedicineInventory
+build_property.RootNamespace = MedicineInventory
+build_property.ProjectDir = /Users/abutaher/MedicineInventoryProject/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/abutaher/MedicineInventoryProject
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Admin/UserMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVXNlck1lc3NhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Auditor/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXVkaXRvci9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Auditor/ExportLogs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXVkaXRvci9FeHBvcnRMb2dzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Auditor/ReportsList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQXVkaXRvci9SZXBvcnRzTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Medicine/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVkaWNpbmUvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Medicine/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVkaWNpbmUvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Medicine/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVkaWNpbmUvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Medicine/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVkaWNpbmUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/User/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVXNlci9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/abutaher/MedicineInventoryProject/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zjwqi6bkli

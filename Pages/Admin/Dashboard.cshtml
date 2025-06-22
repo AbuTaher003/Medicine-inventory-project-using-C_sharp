@@ -1,0 +1,205 @@
+@page
+@model MedicineInventory.Pages.Admin.DashboardModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+    body {
+        background: #f4f6f9;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .dashboard-container {
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .dashboard-header {
+        background: linear-gradient(135deg, #1d3557, #457b9d);
+        color: white;
+        padding: 2.5rem 2rem;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .dashboard-header h2 {
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+
+    .btn-manage {
+        background-color: #2a9d8f;
+        border: none;
+        padding: 0.8rem 1.8rem;
+        font-weight: bold;
+        color: white;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-manage:hover {
+        background-color: #21867a;
+        transform: scale(1.05);
+    }
+
+    .dashboard-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-card h4 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .badge-stock {
+        background-color: #e63946;
+        color: white;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 10px;
+    }
+
+    .badge-expiry {
+        background-color: #f4a261;
+        color: black;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.7rem;
+        border-radius: 10px;
+    }
+
+    .list-group-item {
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+
+    .chart-container {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    #pieChart {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+</style>
+
+<div class="dashboard-container">
+    <!-- Header -->
+    <div class="dashboard-header">
+        <h2><i class="bi bi-speedometer2"></i> Admin Dashboard</h2>
+        <p class="lead mb-0">Welcome! Here's an overview of your system health.</p>
+    </div>
+
+    <!-- Manage Medicines Button -->
+    <div class="text-center mb-4">
+        <a href="/Medicine/Index" class="btn btn-manage">
+            <i class="bi bi-capsule-pill"></i> Manage Medicines
+        </a>
+    </div>
+
+    <!-- Low Stock Section -->
+    <div class="dashboard-card">
+        <h4><i class="bi bi-box-seam"></i> Low Stock Medicines (Quantity &lt; 10) -
+            <span class="badge-stock">Total: @Model.LowStockCount</span>
+        </h4>
+        @if (Model.LowStockCount == 0)
+        {
+            <p class="text-success"><i class="bi bi-check-circle-fill"></i> No low stock medicines currently.</p>
+        }
+        else
+        {
+            <ul class="list-group">
+                @foreach (var med in Model.LowStockMedicines)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>@med.Name</span>
+                        <span class="badge-stock">Qty: @med.Quantity</span>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+
+    <!-- Expiry Alert Section -->
+    <div class="dashboard-card">
+        <h4><i class="bi bi-hourglass-split"></i> Expired/Near Expiry Medicines (Next 30 Days)</h4>
+        @if (Model.ExpiryAlerts.Count == 0)
+        {
+            <p class="text-success"><i class="bi bi-check-circle-fill"></i> No medicines are expired or near expiry.</p>
+        }
+        else
+        {
+            <ul class="list-group">
+                @foreach (var med in Model.ExpiryAlerts)
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>@med.Name</span>
+                        <span class="badge-expiry">Expiry: @med.ExpiryDate?.ToString("yyyy-MM-dd")</span>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+
+    <!-- Pie Chart Section -->
+    <div class="chart-container mt-4">
+        <h5><i class="bi bi-pie-chart-fill"></i> Inventory Overview</h5>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <!-- New User Messages Button Section -->
+    <div class="text-center mt-5">
+        <a href="/Admin/UserMessages" class="btn btn-primary btn-lg shadow">
+            <i class="bi bi-envelope-fill"></i> View User Messages
+        </a>
+    </div>
+
+</div>
+
+<script>
+    const ctx = document.getElementById('pieChart').getContext('2d');
+    const pieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Low Stock', 'Expiring Soon'],
+            datasets: [{
+                label: 'Medicine Overview',
+                data: [@Model.LowStockMedicines?.Count ?? 0, @Model.ExpiryAlerts?.Count ?? 0],
+                backgroundColor: ['#e63946', '#f4a261'],
+                borderColor: ['#ffffff'],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: '#333',
+                        font: { size: 14 }
+                    }
+                }
+            }
+        }
+    });
+</script>
