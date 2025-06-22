@@ -86,14 +86,15 @@ CREATE TABLE IF NOT EXISTS contact_messages (
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+---
 
 
-- How to Run the Project
-Clone this repository.
+❓How to Run the Project
+- ```Clone this repository.```
 
-Set up the MySQL database using the script above.
+- ```Set up the MySQL database using the script above.```
 
-Configure your connection string in appsettings.json:
+- ```Configure your connection string in appsettings.json:```
 
 ```json
 "ConnectionStrings": {
