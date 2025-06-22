@@ -1,0 +1,211 @@
+/* Reset some styles */
+body, h1, h2, p, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+.navbar .logo img {
+    height: 50px;
+}
+.navbar .nav-links a {
+    color: rgb(13, 12, 12);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+    color : #1b6ec2;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../images/banner.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    /* color: white;
+    flex-direction: column; */
+}
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: white;
+}
+.hero p {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    margin: 1rem 0;
+}
+.hero .btn,
+.hero button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00bfff88;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+.hero .btn:hover,
+.hero button:hover {
+    box-shadow: 0 0 18px #00d4ffcc, 0 0 30px #007bffcc;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #00d4ff, #007bff);
+    color: white;
+}
+
+/* About Section */
+.about_cont {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: hsl(200, 12%, 90%);
+    align-items: center;
+    justify-content: center;
+}
+.about_cont img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    margin-right: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.about_descript {
+    flex: 1;
+}
+.about_descript h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.about_descript p {
+    font-size: 1.1rem;
+}
+.about_descript button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #288a33, #c7df2a);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00bfff88;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+.about_descript button:hover {
+    box-shadow: 0 0 18px #daec63, 0 0 30px #52d261;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #c7df2a, #288a33);
+    color: white;
+}
+
+/* Questions/Contact Section */
+.questions_cont {
+    background-color: #e2eafc;
+    padding: 60px 20px;
+    text-align: center;
+}
+.questions h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.questions p {
+    font-size: 1.1rem;
+}
+.questions button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #a60404, #ff8903);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 8px #00bfff88;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+.questions button:hover {
+    box-shadow: 0 0 18px #ffb561, 0 0 30px #ff4545;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff8903, #a60404);
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about_cont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about_cont img {
+        margin: 0 0 20px 0;
+    }
+
+    .about_descript {
+        margin-top: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        display: block;
+        margin: 5px 0;
+    }
+}

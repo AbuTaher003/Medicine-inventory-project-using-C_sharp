@@ -1,0 +1,183 @@
+/* AuditorDashboard.css */
+
+/* Container spacing */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Page Heading */
+h2.text-center {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #004085;
+    margin-bottom: 1.5rem;
+}
+
+/* Cards container */
+.row.text-center {
+    gap: 20px;
+}
+
+/* Individual cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Titles */
+.card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Card Numbers */
+.card h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Color variants for cards */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.bg-warning-subtle {
+    background-color: #fff3cd !important;
+}
+
+.bg-info-subtle {
+    background-color: #d1ecf1 !important;
+}
+
+/* Text color overrides */
+.text-primary {
+    color: #0d6efd !important;
+}
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.text-success {
+    color: #198754 !important;
+}
+
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table thead tr {
+    background-color: #0d6efd;
+    color: white;
+    text-align: left;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.table thead tr th {
+    padding: 12px 15px;
+    border: none;
+}
+
+.table tbody tr {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #e9f2ff;
+}
+
+.table tbody tr td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border: none;
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1.5rem;
+}
+
+/* Alert box styles */
+.alert {
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.alert-secondary {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+/* Badges for audit log actions */
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+}
+
+.bg-success {
+    background-color: #198754;
+    color: white;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row.text-center {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Utility margin */
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-5 {
+    margin-top: 3rem !important;
+}

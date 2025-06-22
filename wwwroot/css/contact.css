@@ -1,0 +1,114 @@
+/* General page styling */
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(90deg, #a60404, #ff8903);
+    color: white;
+    padding: 20px 25px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 30px 25px;
+}
+
+/* Headings */
+.card-body p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form styling */
+.form-label {
+    font-weight: 600;
+    color: #444;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+/* Button */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Validation error text */
+.text-danger {
+    font-size: 0.85rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Success alert */
+.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .card-header {
+        font-size: 1.25rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .card-body {
+        padding: 20px 15px;
+    }
+}
