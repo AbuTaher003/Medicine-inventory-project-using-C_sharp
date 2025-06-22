@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MedicineInventory</RootNamespace>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+  <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
+  <PackageReference Include="MySql.Data" Version="9.0.2" />
+  <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  <PackageReference Include="System.Text.Encodings.Web" Version="8.0.0" />
+  <PackageReference Include="System.IO.Pipelines" Version="7.0.0" />
+  <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+</ItemGroup>
+
+
+</Project>
