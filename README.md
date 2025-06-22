@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 ---
 
 
-❓How to Run the Project
+## ❓ How to Run the Project
 - ```Clone this repository.```
 
 - ```Set up the MySQL database using the script above.```
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS contact_messages (
 }
 ```
 ---
-📂 Folder Structure
+## 📂 Folder Structure
 ```pgsql
 /Pages
   ├── Index.cshtml
